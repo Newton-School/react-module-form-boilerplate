@@ -1,93 +1,12 @@
 import React, { useEffect, useState } from "react";
-
-function FormA({ onSubmit, age }) {
-  const handleSubmit = (event) => {
-  };
-  return (
-    <form id="dc" onSubmit={handleSubmit}>
-      <h2>Form A</h2>
-      <label>
-        Select DC Shows:
-        <select  >
-          <option value="">--Select--</option>
-          <option value="The Flash">The Flash</option>
-          <option value="Arrow">Arrow</option>
-          <option value="Supergirl">Supergirl</option>
-          <option value="Legends of Tomorrow">Legends of Tomorrow</option>
-        </select>
-      </label>
-      <br />
-      <label>
-        Enter your age:
-        <input type="number" value={age} disabled />
-      </label>
-      <br />
-      <button id="submit-dc" type="submit">Submit</button>
-
-    </form>
-  );
-}
-
-function FormB({ onSubmit, age }) {
-  const [marvelShows, setMarvelShows] = useState("");
-
-  const handleSubmit = (event) => {
-  };
-
-
-
-  return (
-    <form id="marvel" >
-      <h2>Form B</h2>
-      <label>
-        Select Marvel Shows:
-        <select  >
-          <option value="">--Select--</option>
-          <option value="WandaVision">WandaVision</option>
-          <option value="The Falcon and the Winter Soldier">
-            The Falcon and the Winter Soldier
-          </option>
-          <option value="Loki">Loki</option>
-          <option value="What If...?">What If...?</option>
-        </select>
-      </label>
-      <br />
-      <label>
-        Enter your age:
-        <input type="number" value={age} disabled />
-      </label>
-      <br />
-      <button id="submit-marvel" type="submit">Submit</button>
-    </form>
-  );
-}
-
-function Summary({ formData }) {
-  return (
-    <div id="summary">
-      <h2>Summary</h2>
-      <p>Form Type: </p>
-      <p>Age: </p>
-
-      <p>DC Shows: </p>
-
-      <p>Marvel Shows: </p>
-
-    </div>
-  );
-}
+import FormA from "./FormA";
+import FormB from "./FormB";
+import Summary from "./Summary";
 
 const App = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
   const [age, setAge] = useState("");
-
-
-
-
-
-
-
 
   return (
     <div>
